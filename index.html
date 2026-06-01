@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRESTIGE MOTORS MOSCOW - Luxury Auto Dealership</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo-section">
+                    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" fill="#FFD700" stroke="#000" stroke-width="2"/>
+                        <path d="M30 50 L50 30 L70 50 L65 50 Q65 60 55 65 L45 65 Q35 60 35 50 Z" fill="#000"/>
+                        <circle cx="40" cy="55" r="3" fill="#FFD700"/>
+                        <circle cx="60" cy="55" r="3" fill="#FFD700"/>
+                        <path d="M45 70 L55 70" stroke="#000" stroke-width="2"/>
+                    </svg>
+                    <h1 class="brand-name">PRESTIGE MOTORS</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#inventory" class="nav-link">Inventory</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Experience Luxury Automobiles</h2>
+            <p class="hero-subtitle">Moscow's Premier Dealership for Exclusive Vehicles</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('inventory')">View Inventory</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('contact')">Schedule Test Drive</button>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Featured Inventory Section -->
+    <section id="inventory" class="inventory">
+        <div class="container">
+            <h2 class="section-title">Featured Vehicles</h2>
+            <p class="section-subtitle">Handpicked luxury automobiles for discerning buyers</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Vehicles</button>
+                <button class="filter-btn" data-filter="sedan">Sedans</button>
+                <button class="filter-btn" data-filter="suv">SUVs</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+            </div>
+
+            <div class="vehicles-grid">
+                <!-- Vehicle Cards -->
+                <div class="vehicle-card" data-category="sedan">
+                    <div class="vehicle-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3effff991c?w=500&h=350&fit=crop" alt="Mercedes-Benz S-Class" class="vehicle-image">
+                        <span class="badge badge-new">NEW</span>
+                        <div class="vehicle-overlay">
+                            <button class="btn-quick-view" onclick="openModal('vehicle-1')">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Mercedes-Benz S-Class</h3>
+                        <p class="vehicle-year">2024 Model</p>
+                        <div class="vehicle-specs">
+                            <span><i class="fas fa-gas-pump"></i> V8 Hybrid</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 8 Speed</span>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price">$95,000</span>
+                            <button class="btn btn-small" onclick="openModal('vehicle-1')">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card" data-category="suv">
+                    <div class="vehicle-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606611013016-969c19d4a42f?w=500&h=350&fit=crop" alt="BMW X7" class="vehicle-image">
+                        <span class="badge badge-featured">FEATURED</span>
+                        <div class="vehicle-overlay">
+                            <button class="btn-quick-view" onclick="openModal('vehicle-2')">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>BMW X7</h3>
+                        <p class="vehicle-year">2024 Model</p>
+                        <div class="vehicle-specs">
+                            <span><i class="fas fa-gas-pump"></i> Twin Turbo</span>
+                            <span><i class="fas fa-tachometer-alt"></i> Automatic</span>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price">$110,000</span>
+                            <button class="btn btn-small" onclick="openModal('vehicle-2')">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card" data-category="sports">
+                    <div class="vehicle-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&h=350&fit=crop" alt="Porsche 911" class="vehicle-image">
+                        <span class="badge badge-exclusive">EXCLUSIVE</span>
+                        <div class="vehicle-overlay">
+                            <button class="btn-quick-view" onclick="openModal('vehicle-3')">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Porsche 911 Turbo</h3>
+                        <p class="vehicle-year">2024 Model</p>
+                        <div class="vehicle-specs">
+                            <span><i class="fas fa-gas-pump"></i> Twin Turbo</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 7 Speed</span>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price">$150,000</span>
+                            <button class="btn btn-small" onclick="openModal('vehicle-3')">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card" data-category="sedan">
+                    <div class="vehicle-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1494976866556-6812c9d1c72e?w=500&h=350&fit=crop" alt="Audi A8" class="vehicle-image">
+                        <div class="vehicle-overlay">
+                            <button class="btn-quick-view" onclick="openModal('vehicle-4')">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Audi A8 L</h3>
+                        <p class="vehicle-year">2024 Model</p>
+                        <div class="vehicle-specs">
+                            <span><i class="fas fa-gas-pump"></i> V6 Turbo</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 8 Speed</span>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price">$88,000</span>
+                            <button class="btn btn-small" onclick="openModal('vehicle-4')">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card" data-category="suv">
+                    <div class="vehicle-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606611013016-969c19d4a42f?w=500&h=350&fit=crop" alt="Range Rover" class="vehicle-image">
+                        <span class="badge badge-hot">HOT DEAL</span>
+                        <div class="vehicle-overlay">
+                            <button class="btn-quick-view" onclick="openModal('vehicle-5')">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Range Rover Vogue</h3>
+                        <p class="vehicle-year">2024 Model</p>
+                        <div class="vehicle-specs">
+                            <span><i class="fas fa-gas-pump"></i> V8 Hybrid</span>
+                            <span><i class="fas fa-tachometer-alt"></i> Automatic</span>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price">$105,000</span>
+                            <button class="btn btn-small" onclick="openModal('vehicle-5')">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-card" data-category="sports">
+                    <div class="vehicle-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1619405399517-d4b794a9e36f?w=500&h=350&fit=crop" alt="Ferrari F8" class="vehicle-image">
+                        <span class="badge badge-premium">PREMIUM</span>
+                        <div class="vehicle-overlay">
+                            <button class="btn-quick-view" onclick="openModal('vehicle-6')">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="vehicle-info">
+                        <h3>Ferrari F8 Tributo</h3>
+                        <p class="vehicle-year">2024 Model</p>
+                        <div class="vehicle-specs">
+                            <span><i class="fas fa-gas-pump"></i> V12</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 7 Speed</span>
+                        </div>
+                        <div class="vehicle-price">
+                            <span class="price">$280,000</span>
+                            <button class="btn btn-small" onclick="openModal('vehicle-6')">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <button class="btn btn-primary btn-large">View All Inventory</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Premium Services</h2>
+            <p class="section-subtitle">Comprehensive automotive solutions for all your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Expert Maintenance</h3>
+                    <p>Professional servicing and maintenance by certified technicians</p>
+                    <button class="btn btn-text">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Trade-In Evaluation</h3>
+                    <p>Fair market assessment and instant quotes for your current vehicle</p>
+                    <button class="btn btn-text">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Financing Options</h3>
+                    <p>Flexible payment plans and competitive interest rates available</p>
+                    <button class="btn btn-text">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Extended Warranty</h3>
+                    <p>Comprehensive coverage and peace of mind for your investment</p>
+                    <button class="btn btn-text">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Delivery Service</h3>
+                    <p>Direct vehicle delivery to your Moscow location</p>
+                    <button class="btn btn-text">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer service and roadside assistance</p>
+                    <button class="btn btn-text">Learn More <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Prestige Motors</h2>
+                    <p>Since 2010, Prestige Motors has been Moscow's leading luxury automobile dealership, serving discerning customers with the finest vehicles from around the world.</p>
+                    <p>Our commitment to excellence, transparency, and customer satisfaction sets us apart. We believe every client deserves a premium experience.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Vehicles Sold</p>
+                        </div>
+                        <div class="stat">
+                            <h4>14+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h4>1000+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h4>98%</h4>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=500&fit=crop" alt="Prestige Motors Showroom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We're here to help with any inquiries</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>Prestige Motors Showroom<br>Kutuzovskiy Prospekt 23<br>Moscow, Russia 121248</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:+74955551234">+7 (495) 555-1234</a><br><a href="tel:+74959876543">+7 (495) 987-6543</a></p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:info@prestigemotors.ru">info@prestigemotors.ru</a><br><a href="mailto:sales@prestigemotors.ru">sales@prestigemotors.ru</a></p>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone Number">
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Subject</option>
+                            <option value="test-drive">Schedule Test Drive</option>
+                            <option value="financing">Financing Inquiry</option>
+                            <option value="trade-in">Trade-In Evaluation</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Vehicle Details -->
+    <div id="vehicleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Vehicle">
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <button class="btn btn-primary btn-large" onclick="handleTestDrive()">Schedule Test Drive</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Prestige Motors</h4>
+                    <p>Moscow's premier luxury automobile dealership offering exclusive vehicles and premium services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#inventory">Inventory</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Phone: +7 (495) 555-1234<br>Email: info@prestigemotors.ru</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Prestige Motors Moscow. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
